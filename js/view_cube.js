@@ -150,16 +150,16 @@ ViewCube = (function() {
         console.log(event);
         switch (event.target.className) {
             case 'default':
-                set_rotation(-30, 45, 0); //isometric
+                set_rotation(-45, -45, 0); //isometric
                 break;
             case 'isometric':
-                set_rotation(-30, 45, 0);
+                set_rotation(-45, -45, 0);
                 break;
             case 'trimetric':
-                set_rotation(-30, 30, 0);
+                set_rotation(-20, -35, 0);
                 break;
             case 'dimetric':
-                set_rotation(-15, 45, 0);
+                set_rotation(-20, -45, 0);
                 break;
             case 'zoom-to-fit':
                 // write webgl func
