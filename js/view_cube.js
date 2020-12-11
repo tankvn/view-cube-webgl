@@ -180,18 +180,18 @@ ViewCube = (function() {
                 // write webgl func
                 break;
             case 'front':
-                //set_rotation(0, 0, 0);
-                set_cube(0, 0, 0);
+                //set_rotation(0, 0, 0);    // Cube X   0 <-> 180
+                set_cube(0, 0, 0);          // Mesh X -90 <->  90
                 set_rotation(-90, 0, 0);
                 break;
             case 'back':
                 //set_rotation(-180, 0, 0);
-                set_cube(-180, 0, 0);
+                set_cube(180, 0, 0);
                 set_rotation(90, 0, 0);
                 break;
             case 'top':
-                //set_rotation(-90, 0, 0);
-                set_cube(-90, 0, 0);
+                //set_rotation(-90, 0, 0);    // Cube X  -90 <-> 90
+                set_cube(-90, 0, 0);          // Mesh X    0 <-> -180
                 set_rotation(0, 0, 0);
                 break;
             case 'bottom':
@@ -200,14 +200,14 @@ ViewCube = (function() {
                 set_rotation(-180, 0, 0);
                 break;
             case 'left':
-                //set_rotation(90, 0, 0);
-                set_cube(90, 0, 0);
-                set_rotation(-90, -90, 0);
+                //set_rotation(90, 0, 0);    // Cube Z  90 <-> -90
+                set_cube(0, 90, 0);          // Mesh X  90, 90 <-> -90, -90
+                set_rotation(90, 90, 0);
                 break;
             case 'right':
                 //set_rotation(-90, 0, 0);
-                set_cube(-90, 0, 0);
-                set_rotation(90, 90, 0);
+                set_cube(0, -90, 0);
+                set_rotation(-90, -90, 0);
                 break;
             default:
         }
