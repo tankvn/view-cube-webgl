@@ -87,21 +87,27 @@ ViewCube = (function() {
     function rotate_click_events(event) {
         switch (event.target.className) {
             case 'rotate-x-cw':
+                set_cube(angle.x + rotation_angle, angle.y, angle.z);
                 set_rotation(angle.x + rotation_angle, angle.y, angle.z);
                 break;
             case 'rotate-x-acw':
+                set_cube(angle.x - rotation_angle, angle.y, angle.z);
                 set_rotation(angle.x - rotation_angle, angle.y, angle.z);
                 break;
             case 'rotate-y-cw':
+                set_cube(angle.x, angle.y + rotation_angle, angle.z);
                 set_rotation(angle.x, angle.y + rotation_angle, angle.z);
                 break;
             case 'rotate-y-acw':
+                set_cube(angle.x, angle.y - rotation_angle, angle.z);
                 set_rotation(angle.x, angle.y - rotation_angle, angle.z);
                 break;
             case 'rotate-z-cw':
+                set_cube(angle.x, angle.y, angle.z + rotation_angle);
                 set_rotation(angle.x, angle.y, angle.z + rotation_angle);
                 break;
             case 'rotate-z-acw':
+                set_cube(angle.x, angle.y, angle.z - rotation_angle);
                 set_rotation(angle.x, angle.y, angle.z - rotation_angle);
                 break;
             default:
