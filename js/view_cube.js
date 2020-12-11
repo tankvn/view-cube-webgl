@@ -127,10 +127,21 @@ ViewCube = (function() {
         delta_angle.z = old_angle.z - angle.z;
 
         //rotate
-        rotate_cube(angle);
+        //rotate_cube(angle);
 
         //its the time for callback
         configuration.callback(get_viewcube_data());
+    }
+
+    function set_cube(x, y, z) {
+        var rot = {
+            x: x,
+            y: y,
+            z: z
+        };
+
+        //rotate
+        rotate_cube(rot);
     }
 
     /**
@@ -150,37 +161,53 @@ ViewCube = (function() {
         console.log(event);
         switch (event.target.className) {
             case 'default':
+                set_cube(-45, -45, 0);
                 set_rotation(-45, -45, 0); //isometric
                 break;
             case 'isometric':
+                set_cube(-45, -45, 0);
                 set_rotation(-45, -45, 0);
                 break;
             case 'trimetric':
+                set_cube(-20, -35, 0);
                 set_rotation(-20, -35, 0);
                 break;
             case 'dimetric':
+                set_cube(-20, -45, 0);
                 set_rotation(-20, -45, 0);
                 break;
             case 'zoom-to-fit':
                 // write webgl func
                 break;
             case 'front':
-                set_rotation(0, 0, 0);
+                //set_rotation(0, 0, 0);
+                set_cube(0, 0, 0);
+                set_rotation(-90, 0, 0);
                 break;
             case 'back':
-                set_rotation(-180, 0, 0);
+                //set_rotation(-180, 0, 0);
+                set_cube(-180, 0, 0);
+                set_rotation(90, 0, 0);
                 break;
             case 'top':
-                set_rotation(-90, 0, 0);
+                //set_rotation(-90, 0, 0);
+                set_cube(-90, 0, 0);
+                set_rotation(0, 0, 0);
                 break;
             case 'bottom':
-                set_rotation(90, 0, 0);
+                //set_rotation(90, 0, 0);
+                set_cube(90, 0, 0);
+                set_rotation(-180, 0, 0);
                 break;
             case 'left':
-                set_rotation(90, 0, 0);
+                //set_rotation(90, 0, 0);
+                set_cube(90, 0, 0);
+                set_rotation(-90, -90, 0);
                 break;
             case 'right':
-                set_rotation(-90, 0, 0);
+                //set_rotation(-90, 0, 0);
+                set_cube(-90, 0, 0);
+                set_rotation(90, 90, 0);
                 break;
             default:
         }
