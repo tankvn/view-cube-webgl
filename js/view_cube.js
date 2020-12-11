@@ -258,12 +258,12 @@ ViewCube = (function() {
                     </section> \
                     <section class="container"> \
                         <div id="cube" class="show-front"> \
-                            <figure class="front">front</figure> \
-                            <figure class="back">back</figure> \
-                            <figure class="right">right</figure> \
-                            <figure class="left">left</figure> \
-                            <figure class="top">top</figure> \
-                            <figure class="bottom">bottom</figure> \
+                            <figure class="front">Front</figure> \
+                            <figure class="back">Back</figure> \
+                            <figure class="right">Right</figure> \
+                            <figure class="left">Left</figure> \
+                            <figure class="top">Top</figure> \
+                            <figure class="bottom">Bottom</figure> \
                         </div> \
                     </section> \
                 </div>';
